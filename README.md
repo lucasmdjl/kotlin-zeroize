@@ -47,3 +47,7 @@ fun main() {
     } // intArray and longArray are now zeroed
 }
 ```
+
+## License
+
+AGPL-3.0
