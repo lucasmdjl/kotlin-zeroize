@@ -75,8 +75,8 @@ public class ZeroingTest {
 
         verify { zeroable.zero() }
         verify { zeroable2.zero() }
-        assertEquals(1, exception.exceptions.size)
-        assertIs<IllegalArgumentException>(exception.exceptions[0])
+        assertEquals(1, exception.suppressedExceptions.size)
+        assertIs<IllegalArgumentException>(exception.suppressedExceptions[0])
     }
     @Test
     public fun zero_whenBlockAndZeroingThrow() {
@@ -95,10 +95,10 @@ public class ZeroingTest {
 
         verify { zeroable.zero() }
         verify { zeroable2.zero() }
-        assertEquals(1, exception.suppressed.size)
-        val suppressed = exception.suppressed[0]
+        assertEquals(1, exception.suppressedExceptions.size)
+        val suppressed = exception.suppressedExceptions[0]
         assertIs<ZeroingException>(suppressed)
-        assertEquals(1, suppressed.exceptions.size)
-        assertIs<IllegalArgumentException>(suppressed.exceptions[0])
+        assertEquals(1, suppressed.suppressedExceptions.size)
+        assertIs<IllegalArgumentException>(suppressed.suppressedExceptions[0])
     }
 }

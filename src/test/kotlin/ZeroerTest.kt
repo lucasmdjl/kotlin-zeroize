@@ -92,6 +92,6 @@ public class ZeroerTest {
         zeroables2.forEach { zeroable ->
             verify { zeroable.zero() }
         }
-        assertEquals(3, exception.exceptions.size)
+        assertEquals(3, exception.suppressedExceptions.size)
     }
 }

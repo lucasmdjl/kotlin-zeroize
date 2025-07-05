@@ -65,6 +65,6 @@ public class ZeroableTest {
         zeroables.forEach { zeroable ->
             verify { zeroable.zero() }
         }
-        assertEquals(3, exception.exceptions.size)
+        assertEquals(3, exception.suppressedExceptions.size)
     }
 }

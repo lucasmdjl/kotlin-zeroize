@@ -23,8 +23,9 @@ package dev.lucasmdjl.zeroize
  *
  * @property exceptions A list of exceptions that occurred during zeroing.
  */
-public class ZeroingException(public val exceptions: List<Exception>) : RuntimeException("One or more exceptions occurred during zeroing") {
-    override fun toString(): String {
-        return super.toString() + exceptions.joinToString("\n", "\n") { "- $it" }
+public class ZeroingException(exceptions: List<Exception>) :
+    RuntimeException("One or more exceptions occurred during zeroing") {
+    init {
+        exceptions.forEach(this::addSuppressed)
     }
 }
