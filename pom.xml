@@ -11,7 +11,7 @@
 
     <name>Zeroize</name>
     <description>Zeroing micro-library for Kotlin</description>
-    <url>https://github.com/lucasmdjl/zeroize</url>
+    <url>https://github.com/lucasmdjl/kotlin-zeroize</url>
 
     <licenses>
         <license>
@@ -28,9 +28,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/lucasmdjl/zeroize.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:lucasmdjl/zeroize.git</developerConnection>
-        <url>https://github.com/lucasmdjl/zeroize</url>
+        <connection>scm:git:git://github.com/lucasmdjl/kotlin-zeroize.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:lucasmdjl/kotlin-zeroize.git</developerConnection>
+        <url>https://github.com/lucasmdjl/kotlin-zeroize</url>
     </scm>
 
     <properties>
