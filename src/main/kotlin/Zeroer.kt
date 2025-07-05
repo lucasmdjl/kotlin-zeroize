@@ -48,6 +48,7 @@ public class Zeroer(vararg toZero: Zeroable) : Zeroable {
  * Executes a block of code with a collection of zeroable resources, ensuring they are zeroed afterwards.
  *
  * This function allows dynamic addition of zeroable instances within [block].
+ * To dynamically add a [Zeroable] instance to be zeroed when [block] ends, call [Zeroer.zeroAtEnd].
  *
  * @param zeroables The zeroable resources to manage.
  * @param block The block of code to execute.

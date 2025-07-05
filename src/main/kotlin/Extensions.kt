@@ -38,9 +38,11 @@ public fun ByteArray.asZeroable(): ZeroableByteArray {
  *
  * @return The original [ByteArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun ByteArray.zeroAtEnd(): ByteArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -62,9 +64,11 @@ public fun IntArray.asZeroable(): ZeroableIntArray {
  *
  * @return The original [IntArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun IntArray.zeroAtEnd(): IntArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -86,9 +90,11 @@ public fun LongArray.asZeroable(): ZeroableLongArray {
  *
  * @return The original [LongArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun LongArray.zeroAtEnd(): LongArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -110,9 +116,11 @@ public fun CharArray.asZeroable(): ZeroableCharArray {
  *
  * @return The original [CharArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun CharArray.zeroAtEnd(): CharArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -134,9 +142,11 @@ public fun BooleanArray.asZeroable(): ZeroableBooleanArray {
  *
  * @return The original [BooleanArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun BooleanArray.zeroAtEnd(): BooleanArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -158,9 +168,11 @@ public fun FloatArray.asZeroable(): ZeroableFloatArray {
  *
  * @return The original [FloatArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun FloatArray.zeroAtEnd(): FloatArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -182,9 +194,11 @@ public fun DoubleArray.asZeroable(): ZeroableDoubleArray {
  *
  * @return The original [DoubleArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun DoubleArray.zeroAtEnd(): DoubleArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -206,9 +220,11 @@ public fun UByteArray.asZeroable(): ZeroableUByteArray {
  *
  * @return The original [UByteArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun UByteArray.zeroAtEnd(): UByteArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -230,9 +246,11 @@ public fun UIntArray.asZeroable(): ZeroableUIntArray {
  *
  * @return The original [UIntArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun UIntArray.zeroAtEnd(): UIntArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -254,9 +272,11 @@ public fun ULongArray.asZeroable(): ZeroableULongArray {
  *
  * @return The original [ULongArray].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun ULongArray.zeroAtEnd(): ULongArray {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -278,9 +298,11 @@ public fun <Z: Zeroable?> Array<Z>.asZeroable(): ZeroableArray<Z> {
  *
  * @return The original [Array].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun <Z: Zeroable?> Array<Z>.zeroAtEnd(): Array<Z> {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
 
 /**
@@ -302,7 +324,9 @@ public fun <Z: Zeroable?, C: Collection<Z>> C.asZeroable(): ZeroableCollection<Z
  *
  * @return The original [Collection].
  */
-context(Zeroer)
+context(zeroer: Zeroer)
 public fun <Z: Zeroable?, C: Collection<Z>> C.zeroAtEnd(): C {
-    return asZeroable().zeroAtEnd().inner
+    with(zeroer) {
+        return asZeroable().zeroAtEnd().inner
+    }
 }
