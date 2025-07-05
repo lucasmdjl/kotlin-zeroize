@@ -43,6 +43,7 @@ public class ZeroingTest {
         verify { zeroable.zero() }
         verify { zeroable2.zero() }
     }
+
     @Test
     public fun zero_whenBlockThrows() {
         val zeroable = mockk<Zeroable>()
@@ -60,6 +61,7 @@ public class ZeroingTest {
         verify { zeroable.zero() }
         verify { zeroable2.zero() }
     }
+
     @Test
     public fun zero_whenZeroingThrows() {
         val zeroable = mockk<Zeroable>()
@@ -78,6 +80,7 @@ public class ZeroingTest {
         assertEquals(1, exception.suppressedExceptions.size)
         assertIs<IllegalArgumentException>(exception.suppressedExceptions[0])
     }
+
     @Test
     public fun zero_whenBlockAndZeroingThrow() {
         val zeroable = mockk<Zeroable>()

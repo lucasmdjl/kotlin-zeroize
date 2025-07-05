@@ -17,6 +17,7 @@
  */
 
 @file:OptIn(ExperimentalUnsignedTypes::class)
+
 package dev.lucasmdjl.zeroize
 
 /**
@@ -282,14 +283,14 @@ public fun ULongArray.zeroAtEnd(): ULongArray {
 /**
  * Zeros all elements in this [Array] of zeroable elements.
  */
-public fun <Z: Zeroable?> Array<Z>.zero() {
+public fun <Z : Zeroable?> Array<Z>.zero() {
     filterNotNull().zeroAll()
 }
 
 /**
  * Wraps this [Array] in a [ZeroableArray] instance.
  */
-public fun <Z: Zeroable?> Array<Z>.asZeroable(): ZeroableArray<Z> {
+public fun <Z : Zeroable?> Array<Z>.asZeroable(): ZeroableArray<Z> {
     return ZeroableArray(this)
 }
 
@@ -299,7 +300,7 @@ public fun <Z: Zeroable?> Array<Z>.asZeroable(): ZeroableArray<Z> {
  * @return The original [Array].
  */
 context(zeroer: Zeroer)
-public fun <Z: Zeroable?> Array<Z>.zeroAtEnd(): Array<Z> {
+public fun <Z : Zeroable?> Array<Z>.zeroAtEnd(): Array<Z> {
     with(zeroer) {
         return asZeroable().zeroAtEnd().inner
     }
@@ -308,14 +309,14 @@ public fun <Z: Zeroable?> Array<Z>.zeroAtEnd(): Array<Z> {
 /**
  * Zeros all elements in this [Collection] of zeroable elements.
  */
-public fun <Z: Zeroable?, C: Collection<Z>> C.zero() {
+public fun <Z : Zeroable?, C : Collection<Z>> C.zero() {
     filterNotNull().zeroAll()
 }
 
 /**
  * Wraps this [Collection] in a [ZeroableCollection] instance.
  */
-public fun <Z: Zeroable?, C: Collection<Z>> C.asZeroable(): ZeroableCollection<Z, C> {
+public fun <Z : Zeroable?, C : Collection<Z>> C.asZeroable(): ZeroableCollection<Z, C> {
     return ZeroableCollection(this)
 }
 
@@ -325,7 +326,7 @@ public fun <Z: Zeroable?, C: Collection<Z>> C.asZeroable(): ZeroableCollection<Z
  * @return The original [Collection].
  */
 context(zeroer: Zeroer)
-public fun <Z: Zeroable?, C: Collection<Z>> C.zeroAtEnd(): C {
+public fun <Z : Zeroable?, C : Collection<Z>> C.zeroAtEnd(): C {
     with(zeroer) {
         return asZeroable().zeroAtEnd().inner
     }

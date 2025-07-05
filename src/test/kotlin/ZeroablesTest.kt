@@ -17,6 +17,7 @@
  */
 
 @file:OptIn(ExperimentalUnsignedTypes::class)
+
 package dev.lucasmdjl.zeroize
 
 import io.mockk.Runs
@@ -134,11 +135,13 @@ public class ZeroableArrayTest {
             confirmVerified(mock)
         }
     }
+
     @Test
     public fun zero_whenEmpty() {
         val zeroable = ZeroableArray(arrayOf<Zeroable>())
         assertDoesNotThrow { zeroable.zero() }
     }
+
     @Test
     public fun zero_whenExceptions() {
         val zeroables = Array(5) { i ->
@@ -173,6 +176,7 @@ public class ZeroableCollectionTest {
             confirmVerified(mock)
         }
     }
+
     @Test
     public fun zero_whenEmpty() {
         val zeroable = ZeroableCollection(setOf<Zeroable>())

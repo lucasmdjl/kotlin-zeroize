@@ -26,6 +26,7 @@ package dev.lucasmdjl.zeroize
  */
 public class Zeroer(vararg toZero: Zeroable) : Zeroable {
     private val toZero: MutableList<Zeroable> = mutableListOf(*toZero)
+
     /**
      * Adds a zeroable resource to be zeroed when this Zeroer instance is zeroed.
      *

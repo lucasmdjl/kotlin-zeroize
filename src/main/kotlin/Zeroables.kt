@@ -17,6 +17,7 @@
  */
 
 @file:OptIn(ExperimentalUnsignedTypes::class)
+
 package dev.lucasmdjl.zeroize
 
 /**
@@ -44,6 +45,7 @@ public value class ZeroableByteArray(public val inner: ByteArray) : Zeroable {
 public value class ZeroableIntArray(public val inner: IntArray) : Zeroable {
     override fun zero(): Unit = inner.zero()
 }
+
 /**
  * A zeroable wrapper around an [LongArray].
  *
@@ -172,7 +174,7 @@ public value class ZeroableArray<Z : Zeroable?>(public val inner: Array<Z>) : Ze
  * @property inner The underlying collection to be zeroed.
  */
 @JvmInline
-public value class ZeroableCollection<Z: Zeroable?, C: Collection<Z>>(public val inner: C): Zeroable {
+public value class ZeroableCollection<Z : Zeroable?, C : Collection<Z>>(public val inner: C) : Zeroable {
     override fun zero() {
         inner.filterNotNull().zeroAll()
     }
