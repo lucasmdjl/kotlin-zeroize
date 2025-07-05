@@ -17,7 +17,7 @@
  */
 
 @file:OptIn(ExperimentalUnsignedTypes::class)
-package io.github.lucasmdjl.zeroize
+package dev.lucasmdjl.zeroize
 
 import io.mockk.Runs
 import io.mockk.confirmVerified

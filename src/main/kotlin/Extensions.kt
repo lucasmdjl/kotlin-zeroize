@@ -17,7 +17,7 @@
  */
 
 @file:OptIn(ExperimentalUnsignedTypes::class)
-package io.github.lucasmdjl.zeroize
+package dev.lucasmdjl.zeroize
 
 /**
  * Fills this [ByteArray] with zeros.

@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>io.github.lucasmdjl</groupId>
-    <artifactId>zeroize</artifactId>
+    <groupId>dev.lucasmdjl</groupId>
+    <artifactId>kotlin-zeroize</artifactId>
     <version>0.1.0</version>
 
     <name>Zeroize</name>
-    <description>Zeroing library</description>
+    <description>Zeroing micro-library for Kotlin</description>
     <url>https://github.com/lucasmdjl/zeroize</url>
 
     <licenses>
@@ -68,11 +68,11 @@
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <version>0.8.0</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <publishingServerId>central</publishingServerId>
-                    <tokenAuth>true</tokenAuth>
+                    <publishingServerId>${central.server.id}</publishingServerId>
+                    <waitUntil>published</waitUntil>
                 </configuration>
             </plugin>
             <plugin>

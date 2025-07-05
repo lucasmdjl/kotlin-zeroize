@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.github.lucasmdjl.zeroize
+package dev.lucasmdjl.zeroize
 
 import io.mockk.Runs
 import io.mockk.every

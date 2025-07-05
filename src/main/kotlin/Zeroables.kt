@@ -17,7 +17,7 @@
  */
 
 @file:OptIn(ExperimentalUnsignedTypes::class)
-package io.github.lucasmdjl.zeroize
+package dev.lucasmdjl.zeroize
 
 /**
  * A zeroable wrapper around a [ByteArray].

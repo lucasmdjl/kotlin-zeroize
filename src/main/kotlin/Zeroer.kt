@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.github.lucasmdjl.zeroize
+package dev.lucasmdjl.zeroize
 
 /**
  * A class that manages zeroable resources. Rather than using this class directly,

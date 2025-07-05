@@ -15,7 +15,7 @@ A Kotlin library for securely zeroing various types of resources, ensuring that 
 
 ```kotlin
 dependencies {
-    implementation("io.github.lucasmdjl:zeroize:0.1.0")
+    implementation("dev.lucasmdjl:kotlin-zeroize:0.1.0")
 }
 ```
 
@@ -23,8 +23,8 @@ dependencies {
 
 ```xml
 <dependency>
-    <group>io.github.lucasmdjl</group>
-    <artifact>zeroize</artifact>
+    <group>dev.lucasmdjl</group>
+    <artifact>kotlin-zeroize</artifact>
     <version>0.1.0</version>
 </dependency>
 ```

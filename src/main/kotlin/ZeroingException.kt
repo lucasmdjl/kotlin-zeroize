@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package io.github.lucasmdjl.zeroize
+package dev.lucasmdjl.zeroize
 
 /**
  * An exception class that aggregates one or multiple exceptions that occur during the zeroing process.
